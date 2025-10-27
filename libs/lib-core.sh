@@ -26,7 +26,9 @@ MY_HOME=$(getent passwd "${MY_USERNAME}" | cut -d: -f6)
 
 if command -v gnome-shell &> /dev/null; then
   SHELL_VERSION="$(gnome-shell --version | cut -d ' ' -f 3 | cut -d . -f -1)"
-  if [[ "${SHELL_VERSION:-}" -ge "47" ]]; then
+  if [[ "${SHELL_VERSION:-}" -ge "48" ]]; then
+    GNOME_VERSION="48-0"
+  elif [[ "${SHELL_VERSION:-}" -ge "47" ]]; then
     GNOME_VERSION="47-0"
   elif [[ "${SHELL_VERSION:-}" -ge "46" ]]; then
     GNOME_VERSION="46-0"
@@ -40,7 +42,7 @@ if command -v gnome-shell &> /dev/null; then
     GNOME_VERSION="3-28"
   fi
 else
-  GNOME_VERSION="47-0"
+  GNOME_VERSION="48-0"
 fi
 
 #----------Program options-------------#
@@ -56,11 +58,11 @@ SUDO_BIN="$(which sudo)"
 
 #------------Directories--------------#
 THEME_SRC_DIR="${REPO_DIR}/src"
-DASH_TO_DOCK_SRC_DIR="${REPO_DIR}/src/other/dash-to-dock"
+DASH_TO_DOCK_SRC_DIR="${REPO_DIR}/other/dash-to-dock"
 DASH_TO_DOCK_DIR_ROOT="/usr/share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com"
 DASH_TO_DOCK_DIR_HOME="${MY_HOME}/.local/share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com"
 GNOME_SHELL_EXTENSION_DIR="${MY_HOME}/.local/share/gnome-shell/extensions"
-FIREFOX_SRC_DIR="${REPO_DIR}/src/other/firefox"
+FIREFOX_SRC_DIR="${REPO_DIR}/other/firefox"
 FIREFOX_DIR_HOME="${MY_HOME}/.mozilla/firefox"
 FIREFOX_THEME_DIR="${MY_HOME}/.mozilla/firefox/firefox-themes"
 FIREFOX_FLATPAK_DIR_HOME="${MY_HOME}/.var/app/org.mozilla.firefox/.mozilla/firefox"
@@ -84,9 +86,11 @@ ETC_CSS_FILE="/etc/alternatives/gdm3.css"
 ETC_GR_FILE="/etc/alternatives/gdm3-theme.gresource"
 YARU_GR_FILE="/usr/share/gnome-shell/theme/Yaru/gnome-shell-theme.gresource"
 POP_OS_GR_FILE="/usr/share/gnome-shell/theme/Pop/gnome-shell-theme.gresource"
-ZORIN_GR_FILE="/usr/share/gnome-shell/theme/ZorinBlue-Light/gnome-shell-theme.gresource"
+ZORIN_GR_LIGHT_FILE="/usr/share/gnome-shell/theme/ZorinBlue-Light/gnome-shell-theme.gresource"
+ZORIN_GR_DARK_FILE="/usr/share/gnome-shell/theme/ZorinBlue-Dark/gnome-shell-theme.gresource"
 MISC_GR_FILE="/usr/share/gnome-shell/gnome-shell-theme.gresource"
 GS_GR_XML_FILE="${THEME_SRC_DIR}/main/gnome-shell/gnome-shell-theme.gresource.xml"
+GDM_GR_XML_FILE="${REPO_DIR}/other/gdm/gnome-shell-theme.gresource.xml"
 
 #-------------Theme---------------#
 THEME_NAME="WhiteSur"
@@ -96,7 +100,7 @@ OPACITY_VARIANTS=('normal' 'solid')
 ALT_VARIANTS=('normal' 'alt')
 THEME_VARIANTS=('default' 'blue' 'purple' 'pink' 'red' 'orange' 'yellow' 'green' 'grey')
 SCHEME_VARIANTS=('standard' 'nord')
-ICON_VARIANTS=('apple' 'simple' 'gnome' 'ubuntu' 'tux' 'arch' 'manjaro' 'fedora' 'debian' 'void' 'opensuse' 'popos' 'mxlinux' 'zorin' 'budgie' 'gentoo')
+ICON_VARIANTS=('apple' 'simple' 'gnome' 'ubuntu' 'tux' 'arch' 'manjaro' 'fedora' 'debian' 'void' 'opensuse' 'popos' 'mxlinux' 'zorin' 'budgie' 'gentoo' 'kali')
 SIDEBAR_SIZE_VARIANTS=('default' '180' '220' '240' '260' '280')
 PANEL_OPACITY_VARIANTS=('default' '30' '45' '60' '75')
 PANEL_SIZE_VARIANTS=('default' 'smaller' 'bigger')
@@ -117,6 +121,13 @@ panel_size="${PANEL_SIZE_VARIANTS[0]}"
 nautilus_style="${NAUTILUS_STYLE_VARIANTS[0]}"
 background="blank"
 compact="true"
+
+# Firefox values
+adaptive=''
+theme_name="$THEME_NAME"
+firefoxtheme="$THEME_NAME"
+left_button="3"
+right_button="3"
 
 #--Ambigous arguments checking and overriding default values--#
 declare -A has_set=([-b]="false" [-s]="false" [-p]="false" [-h]="false" [-d]="false" [-n]="false" [-a]="false" [-o]="false" [-c]="false" [-i]="false" [-t]="false" [-N]="false")
@@ -257,7 +268,6 @@ if [[ -d "${WHITESUR_TMP_DIR}" ]]; then
 
   if [[ -d "${WHITESUR_TMP_DIR}" ]]; then
     prompt -e "ERROR: Whitesur installer or tweaks is already running. Probably it's run by '$(ls -ld "${WHITESUR_TMP_DIR}" | awk '{print $3}')'"
-    exit 1
   fi
 fi
 
@@ -390,8 +400,7 @@ dialogify() {
 }
 
 helpify_title() {
-  printf "${c_cyan}%s${c_blue}%s ${c_green}%s\n\n" "Usage: " "$0" "[OPTIONS...]"
-  printf "${c_cyan}%s\n" "OPTIONS:"
+  printf "${c_cyan}%s${c_blue}%s ${c_green}%s \n" " Usage: " "$0" "[OPTION]"
 }
 
 helpify() {
@@ -586,7 +595,7 @@ check_param() {
           fi
         done ;;
       -i)
-        for i in {0..13}; do
+        for i in {0..16}; do
           if [[ "${value}" == "${ICON_VARIANTS[i]}" ]]; then
             icon="${ICON_VARIANTS[i]}"; variant_found="true"; break
           fi

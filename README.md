@@ -195,44 +195,24 @@ Usage:  `./tweaks.sh [OPTIONS...]`
 
 ```bash
 
-OPTIONS:
-  -o, --opacity [normal|solid]
-   Set 'WhiteSur' GDM/Flatpak theme opacity variants. Default is 'normal'
-
-  -c, --color [light|dark]
-   Set 'WhiteSur' GDM/Flatpak theme color variants. Default is 'light'
-
-  -t, --theme [default|blue|purple|pink|red|orange|yellow|green|grey]
-   Set 'WhiteSur' GDM/Flatpak theme accent color. Default is BigSur-like theme
-
-  -s, --scheme [standard|nord]
-   Set 'WhiteSur' GDM/Flatpak theme colorscheme style. Default is 'standard'
-
+ Usage: ./tweaks.sh [OPTION] 
    
  Tweaks for GDM theme. options
 
   -g, --gdm    Without options default GDM theme will install... 
 
-      1. -i, -icon [apple|simple|gnome|ubuntu|tux|arch|manjaro|fedora|debian|void|opensuse|popos|mxlinux|zorin|budgie|gentoo]   Set GDM panel 'Activities' icon Default is 'standard'
+      1. -b, -background [default|blank|IMAGE_PATH]   Set GDM background image Default is BigSur-like wallpaper
 
-      2. -b, -background [default|blank|IMAGE_PATH]   Set GDM background image Default is BigSur-like wallpaper
+      2. -nd, -nodarken    Don't darken 'WhiteSur' GDM theme background image 
 
-      3. -p, -panelopacity [default|30|45|60|75]   Set GDM panel transparency Default is 15%
-
-      4. -h, -panelheight [default|smaller|bigger]   Set GDM panel height size Default is 32px
-
-      5. -sf, -smallerfont    Set GDM font size to smaller (10pt) Default is 11pt
-
-      6. -nd, -nodarken    Don't darken 'WhiteSur' GDM theme background image 
-
-      7. -nb, -noblur    Don't blur 'WhiteSur' GDM theme background image 
+      3. -nb, -noblur    Don't blur 'WhiteSur' GDM theme background image 
 
    
  Tweaks for firefox. options
 
   -f, --firefox         [(monterey|flat)|alt|(darker|adaptive)]   Without options default WhiteSur theme will install...   Options:
 
-      1. monterey       [3+3|3+4|3+5|4+3|4+4|4+5|5+3|5+4|5+5]   Topbar buttons number: 'a+b'   a: left side buttons number, b: right side buttons number
+      1. monterey       [3+3|3+4|3+5|4+3|4+4|4+5|5+3|5+4|5+5]   Topbar buttons (not window control buttons) number: 'a+b'   a: left side buttons number, b: right side buttons number
 
       2. flat           Monterey alt version    Flat round tabs...
 
@@ -243,6 +223,8 @@ OPTIONS:
       5. nord           Nord Firefox colorscheme version    Nord Firefox colorscheme version
 
       6. adaptive       Adaptive color version   You need install adaptive-tab-bar-colour plugin first   https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour/
+
+      7. link           Install links for theme    Link source file to theme folder
 
   -e, --edit-firefox [(monterey|flat)|alt|(darker|adaptive)]
    Edit 'WhiteSur' theme for Firefox settings and also connect the theme to the current Firefox profiles. 
@@ -256,7 +238,7 @@ OPTIONS:
 
       2.  -c, --color [Light|Dark]   Set 'WhiteSur' flatpak theme color variants Default is 'light'
 
-      3.  -t, --theme [default|blue|purple|pink|red|orange|yellow|green|grey]   Set 'WhiteSur' flatpak theme accent color Default is BigSur-like theme
+      3.  -t, --theme [default|blue|purple|pink|red|orange|yellow|green|grey]   Set 'WhiteSur' flatpak theme accent color Default is 'blue'
 
       4.  -s, --scheme [standard|nord]   Set 'WhiteSur' flatpak theme colorscheme style Default is 'standard'
 

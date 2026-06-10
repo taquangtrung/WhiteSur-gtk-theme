@@ -574,11 +574,11 @@ remove_libadwaita() {
 ###############################################################################
 
 fix_whiskermenu() {
-  if (command -v xfce4-popup-whiskermenu &> /dev/null) && $(sed -i "s|.*menu-opacity=.*|menu-opacity=95|" "$HOME/.config/xfce4/panel/whiskermenu"*".rc" &> /dev/null); then
+  if has_command xfce4-popup-whiskermenu && $(sed -i "s|.*menu-opacity=.*|menu-opacity=95|" "$HOME/.config/xfce4/panel/whiskermenu"*".rc" &> /dev/null); then
     sed -i "s|.*menu-opacity=.*|menu-opacity=95|" "$HOME/.config/xfce4/panel/whiskermenu"*".rc"
   fi
 
-  if pgrep xfce4-session &> /dev/null && [ "$(id -u)" -ne 0 ]; then
+  if pgrep xfce4-session &> /dev/null && [ "$(id -u)" -ne 0 ] && has_command xfce4-popup-whiskermenu; then
     xfce4-panel -r
   fi
 }
@@ -1096,6 +1096,7 @@ libadwaita_base() {
 shell_base() {
   cp -rf "${THEME_SRC_DIR}/main/gnome-shell/_shell-base"{".scss","-temp.scss"}
 
+  sed $SED_OPT "/\GNOME_SHELL/s/46/$SHELL_VERSION/"                             "${THEME_SRC_DIR}/main/gnome-shell/_shell-base-temp.scss"
   sed $SED_OPT "/\widgets/s/46-0/$GNOME_VERSION/"                               "${THEME_SRC_DIR}/main/gnome-shell/_shell-base-temp.scss"
 
   if [[ "${GNOME_VERSION}" == '3-28' ]]; then

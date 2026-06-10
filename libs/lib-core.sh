@@ -48,6 +48,7 @@ if has_command gnome-shell; then
   fi
 else
   GNOME_VERSION="48-0"
+  SHELL_VERSION="48"
 fi
 
 #----------Program options-------------#
@@ -84,7 +85,7 @@ export WHITESUR_TMP_DIR="/tmp/WhiteSur.lock"
 if [[ -w "/root" ]]; then
   THEME_DIR="/usr/share/themes"
 else
-  THEME_DIR="$HOME/.themes"
+  THEME_DIR="$HOME/.local/share/themes"
 fi
 
 #--------------GDM----------------#

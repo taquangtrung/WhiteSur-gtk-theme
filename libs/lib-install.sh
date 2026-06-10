@@ -493,17 +493,19 @@ install_theemy() {
   local HDPI_TARGET_DIR="${TARGET_DIR}-hdpi"
   local XHDPI_TARGET_DIR="${TARGET_DIR}-xhdpi"
 
+  local xfwm4_color="-Dark"
+
   mkdir -p                                                                                    "${TARGET_DIR}/xfwm4"
-  cp -r "${THEME_SRC_DIR}/assets/xfwm4/assets${color}${scheme}/"*".png"                       "${TARGET_DIR}/xfwm4"
-  cp -r "${THEME_SRC_DIR}/main/xfwm4/themerc${color}"                                         "${TARGET_DIR}/xfwm4/themerc"
+  cp -r "${THEME_SRC_DIR}/assets/xfwm4/assets${xfwm4_color}${scheme}/"*".png"                 "${TARGET_DIR}/xfwm4"
+  cp -r "${THEME_SRC_DIR}/main/xfwm4/themerc${xfwm4_color}"                                   "${TARGET_DIR}/xfwm4/themerc"
 
   mkdir -p                                                                                    "${HDPI_TARGET_DIR}/xfwm4"
-  cp -r "${THEME_SRC_DIR}/assets/xfwm4/assets${color}${scheme}-hdpi/"*".png"                  "${HDPI_TARGET_DIR}/xfwm4"
-  cp -r "${THEME_SRC_DIR}/main/xfwm4/themerc${color}"                                         "${HDPI_TARGET_DIR}/xfwm4/themerc"
+  cp -r "${THEME_SRC_DIR}/assets/xfwm4/assets${xfwm4_color}${scheme}-hdpi/"*".png"            "${HDPI_TARGET_DIR}/xfwm4"
+  cp -r "${THEME_SRC_DIR}/main/xfwm4/themerc${xfwm4_color}"                                   "${HDPI_TARGET_DIR}/xfwm4/themerc"
 
   mkdir -p                                                                                    "${XHDPI_TARGET_DIR}/xfwm4"
-  cp -r "${THEME_SRC_DIR}/assets/xfwm4/assets${color}${scheme}-xhdpi/"*".png"                 "${XHDPI_TARGET_DIR}/xfwm4"
-  cp -r "${THEME_SRC_DIR}/main/xfwm4/themerc${color}"                                         "${XHDPI_TARGET_DIR}/xfwm4/themerc"
+  cp -r "${THEME_SRC_DIR}/assets/xfwm4/assets${xfwm4_color}${scheme}-xhdpi/"*".png"           "${XHDPI_TARGET_DIR}/xfwm4"
+  cp -r "${THEME_SRC_DIR}/main/xfwm4/themerc${xfwm4_color}"                                   "${XHDPI_TARGET_DIR}/xfwm4/themerc"
 
   mkdir -p                                                                                    "${TARGET_DIR}/metacity-1"
   cp -r "${THEME_SRC_DIR}/main/metacity-1/metacity-theme${color}.xml"                         "${TARGET_DIR}/metacity-1/metacity-theme-1.xml"

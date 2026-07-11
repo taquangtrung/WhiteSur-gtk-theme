@@ -967,13 +967,33 @@
   </g>
   <g
      id="left-active"
-     transform="translate(16,-545.36)" />
+     transform="translate(16,-545.36)">
+    <rect
+       transform="scale(-1,1)"
+       x="-47"
+       y="734.36"
+       width="1"
+       height="16"
+       fill="#aaaaaa" />
+  </g>
   <g
      id="bottom-left-active"
-     transform="translate(-7,-547.36)" />
+     transform="translate(-7,-547.36)">
+    <path
+       d="m97 730.36-1-1.2e-4v9.0001h1v1l9-1.2e-4v-0.99988h-9z"
+       fill="#aaaaaa" />
+  </g>
   <g
      id="bottom-active"
-     transform="matrix(0,-1,-1,0,851.36,239)" />
+     transform="matrix(0,-1,-1,0,851.36,239)">
+    <rect
+       transform="scale(-1,1)"
+       x="-47"
+       y="734.36"
+       width="1"
+       height="16"
+       fill="#aaaaaa" />
+  </g>
   <g
      id="maximize-toggled-inactive"
      transform="matrix(0.92857143,0,0,0.92857143,3.5714286,-438.19143)">

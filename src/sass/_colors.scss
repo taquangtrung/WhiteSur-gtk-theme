@@ -293,7 +293,7 @@ $button_highlight:                  if($variant == 'light', white, rgba(white, 0
 $button_borders:                    if($variant == 'light', $button_border, $dark_borders_color);
 
 // WM colors
-$wm_outline_light:                  0 0 0 2px rgba(black, 0.03), 0 0 0 1px rgba(black, 0.12);
+$wm_outline_light:                  0 0 0 2px rgba(black, 0.03), 0 0 0 1px #414248;
 $wm_outline_dark:                   0 0 0 2px rgba(white, 0.03), 0 0 0 1px #414248;
 $wm_border:                         if($variant=='light', rgba(black, 0.15), rgba(black, 0.75));
 $wm_shadow:                         if($variant=='light', rgba(black, 0.13), rgba(black, 0.2));

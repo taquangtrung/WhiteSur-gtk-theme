@@ -974,14 +974,14 @@
        y="734.36"
        width="1"
        height="16"
-       fill="#414248" />
+       fill="#afb1bf" />
   </g>
   <g
      id="bottom-left-active"
      transform="translate(-7,-547.36)">
     <path
        d="m97 730.36-1-1.2e-4v9.0001h1v1l9-1.2e-4v-0.99988h-9z"
-       fill="#414248" />
+       fill="#afb1bf" />
   </g>
   <g
      id="bottom-active"
@@ -992,7 +992,7 @@
        y="734.36"
        width="1"
        height="16"
-       fill="#414248" />
+       fill="#afb1bf" />
   </g>
   <g
      id="maximize-toggled-inactive"
@@ -1318,12 +1318,14 @@
        transform="translate(-3)"
        id="g440">
       <path
-         d="m -2,725.36 a 6,5.77778 0 0 0 -6,5.77778 V 751.36 H 3 V 725.36 Z"
+         d="m -2,725.36 c 0,0 -0.7512501,0.0971 -1.28361,0.28213 -0.4477671,0.15565 -1.1032802,0.50996 -1.4997691,0.7698 -0.3676714,0.24096 -0.7031146,0.5317 -1.0175944,0.83886 -0.2869929,0.28031 -0.547501,0.58868 -0.7872047,0.91036 -0.3184804,0.4274 -0.4847175,0.66434 -0.8599378,1.34812 C -7.8267035,730.19919 -8,731.13778 -8,731.13778 V 751.36 H 3 v -26 z"
          fill="#373737"
          stroke-linecap="round"
          stroke-linejoin="round"
-         style="stroke:#414248;stroke-width:1;vector-effect:non-scaling-stroke;stroke-dasharray:none;paint-order:fill stroke markers"
-         id="path438" />
+         stroke-width="7.3694"
+         style="stroke:none;stroke-width:7.23125;stroke-dasharray:none;paint-order:stroke fill markers"
+         id="path438"
+         sodipodi:nodetypes="csssssccccc" />
     </g>
   </g>
   <use

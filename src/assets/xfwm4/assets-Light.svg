@@ -1065,7 +1065,7 @@
        y="734.35999"
        width="1"
        height="16"
-       fill="#afb1bf"
+       fill="#4f515a"
        id="rect347" />
   </g>
   <g
@@ -1077,7 +1077,7 @@
        y="734.35999"
        width="1"
        height="16"
-       fill="#afb1bf"
+       fill="#4f515a"
        id="rect350" />
   </g>
   <g
@@ -1089,7 +1089,7 @@
        y="734.35999"
        width="1"
        height="16"
-       fill="#afb1bf"
+       fill="#4f515a"
        id="rect353" />
   </g>
   <g
@@ -1101,7 +1101,7 @@
        y="734.35999"
        width="1"
        height="16"
-       fill="#afb1bf"
+       fill="#4f515a"
        id="rect356" />
   </g>
   <g
@@ -1109,7 +1109,7 @@
      transform="translate(54,-547.36)">
     <path
        d="m 97,730.36 -1,-1.2e-4 v 9.0001 h 1 v 1 l 9,-1.2e-4 v -0.99988 h -9 z"
-       fill="#afb1bf"
+       fill="#4f515a"
        id="path359" />
   </g>
   <g
@@ -1117,7 +1117,7 @@
      transform="translate(54,-535.36)">
     <path
        d="m 97,730.36 -1,-1.2e-4 v 9.0001 h 1 v 1 l 9,-1.2e-4 v -0.99988 h -9 z"
-       fill="#afb1bf"
+       fill="#4f515a"
        id="path362" />
   </g>
   <g
@@ -1125,7 +1125,7 @@
      transform="matrix(-1,0,0,1,286,-535.36)">
     <path
        d="m 97,730.36 -1,-1.2e-4 v 9.0001 h 1 v 1 l 9,-1.2e-4 v -0.99988 h -9 z"
-       fill="#afb1bf"
+       fill="#4f515a"
        id="path365" />
   </g>
   <g
@@ -1133,7 +1133,7 @@
      transform="matrix(-1,0,0,1,286,-547.36)">
     <path
        d="m 97,730.36 -1,-1.2e-4 v 9.0001 h 1 v 1 l 9,-1.2e-4 v -0.99988 h -9 z"
-       fill="#afb1bf"
+       fill="#4f515a"
        id="path368" />
   </g>
   <g
@@ -1145,7 +1145,7 @@
        y="734.35999"
        width="1"
        height="16"
-       fill="#afb1bf"
+       fill="#4f515a"
        id="rect371" />
   </g>
   <g
@@ -1157,7 +1157,7 @@
        y="734.35999"
        width="1"
        height="16"
-       fill="#afb1bf"
+       fill="#4f515a"
        id="rect374" />
   </g>
   <g
@@ -1480,7 +1480,7 @@
     <path
        transform="translate(-5,547.36)"
        d="m 14,225 v 1 h 5 v -1 h -4 z m 0,1 h -3 v 1 h 3 z m -3,1 H 9 v 1 h 2 z m -2,1 H 8 v 1 h 1 z m -1,1 H 7 v 1 h 1 z m -1,1 H 6 v 1 h 1 z m -1,1 H 5 v 2 h 1 v -1 z m -1,2 H 4 v 2 h 1 v -1 z m -1,2 H 3 v 18 h 1 z"
-       fill="#414248"
+       fill="#4f515a"
        stroke-linecap="round"
        stroke-linejoin="round"
        stroke-width="9.2376"

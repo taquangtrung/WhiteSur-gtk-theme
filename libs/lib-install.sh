@@ -493,7 +493,7 @@ install_theemy() {
   local HDPI_TARGET_DIR="${TARGET_DIR}-hdpi"
   local XHDPI_TARGET_DIR="${TARGET_DIR}-xhdpi"
 
-  local xfwm4_color="-Dark"
+  local xfwm4_color="${color}"
 
   mkdir -p                                                                                    "${TARGET_DIR}/xfwm4"
   cp -r "${THEME_SRC_DIR}/assets/xfwm4/assets${xfwm4_color}${scheme}/"*".png"                 "${TARGET_DIR}/xfwm4"

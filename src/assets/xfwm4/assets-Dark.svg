@@ -917,6 +917,13 @@
          height="28"
          fill="#373737"
          id="rect290" />
+      <rect
+         x="7"
+         y="557.35999"
+         width="24"
+         height="1"
+         fill="#414248"
+         id="rect291" />
     </g>
     <g
        transform="translate(7,559.36)"
@@ -974,14 +981,14 @@
        y="734.36"
        width="1"
        height="16"
-       fill="#afb1bf" />
+       fill="#414248" />
   </g>
   <g
      id="bottom-left-active"
      transform="translate(-7,-547.36)">
     <path
        d="m97 730.36-1-1.2e-4v9.0001h1v1l9-1.2e-4v-0.99988h-9z"
-       fill="#afb1bf" />
+       fill="#414248" />
   </g>
   <g
      id="bottom-active"
@@ -992,7 +999,7 @@
        y="734.36"
        width="1"
        height="16"
-       fill="#afb1bf" />
+       fill="#414248" />
   </g>
   <g
      id="maximize-toggled-inactive"

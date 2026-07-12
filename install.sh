@@ -199,6 +199,10 @@ else
 
   echo; install_themes; echo; prompt -s "Done!"
 
+  if is_running "xfwm4"; then
+    xfwm4 --replace &
+  fi
+
   if (is_my_distro "solus") && (is_running "gnome-session"); then
     msg="GNOME: you may need to disable 'User Themes' extension to fix your dock."
   fi

@@ -86,8 +86,8 @@
        d="m 7,557.35999 h 24 v 28 H 7 Z" />
     <path
        id="rect1568"
-       style="opacity:0.1;fill:#373737;fill-opacity:1"
-       d="m 7,558.35999 h 24 v 1 H 7 Z" />
+       style="opacity:1;fill:#414248;fill-opacity:1"
+       d="m 7,557.35999 h 24 v 1 H 7 Z" />
   </g>
   <g
      id="stick-active"
@@ -974,14 +974,14 @@
        y="734.36"
        width="1"
        height="16"
-       fill="#aaaaaa" />
+       fill="#414248" />
   </g>
   <g
      id="bottom-left-active"
      transform="translate(-7,-547.36)">
     <path
        d="m97 730.36-1-1.2e-4v9.0001h1v1l9-1.2e-4v-0.99988h-9z"
-       fill="#aaaaaa" />
+       fill="#414248" />
   </g>
   <g
      id="bottom-active"
@@ -992,7 +992,7 @@
        y="734.36"
        width="1"
        height="16"
-       fill="#aaaaaa" />
+       fill="#414248" />
   </g>
   <g
      id="maximize-toggled-inactive"
@@ -1322,8 +1322,7 @@
          fill="#373737"
          stroke-linecap="round"
          stroke-linejoin="round"
-         stroke-width="7.3694"
-         style="stroke:none;stroke-width:7.23125;stroke-dasharray:none;paint-order:stroke fill markers"
+         style="stroke:#414248;stroke-width:1;vector-effect:non-scaling-stroke;stroke-dasharray:none;paint-order:fill stroke markers"
          id="path438"
          sodipodi:nodetypes="csssssccccc" />
     </g>
